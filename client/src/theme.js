@@ -1,44 +1,44 @@
 // color design tokens export
 export const tokensDark = {
   grey: {
-    0: "#f9f9f9", // manually adjusted
-    10: "#f2f2f2", // manually adjusted
-    50: "#eaeaea", // manually adjusted
-    100: "#d1d1d1",
-    200: "#b3b3b3",
-    300: "#969696",
-    400: "#7a7a7a",
-    500: "#5e5e5e",
-    600: "#474747",
-    700: "#343434",
-    800: "#202020",
-    900: "#0d0d0d",
+    0: "#ffffff", // manually adjusted
+    10: "#f6f6f6", // manually adjusted
+    50: "#f0f0f0", // manually adjusted
+    100: "#e0e0e0",
+    200: "#c2c2c2",
+    300: "#a3a3a3",
+    400: "#858585",
+    500: "#666666",
+    600: "#525252",
+    700: "#3d3d3d",
+    800: "#292929",
+    900: "#141414",
     1000: "#000000", // manually adjusted
   },
   primary: {
-    // vibrant purple-blue
-    100: "#e1e2f2",
-    200: "#c3c5e5",
-    300: "#a4a8d8",
-    400: "#868bcb",
-    500: "#686ebd",
-    600: "#525899", // manually adjusted
-    700: "#3d4275",
-    800: "#282d51",
-    900: "#14162c",
+    // blue
+    100: "#d3d4de",
+    200: "#a6a9be",
+    300: "#7a7f9d",
+    400: "#4d547d",
+    500: "#21295c",
+    600: "#191F45", // manually adjusted
+    700: "#141937",
+    800: "#0d1025",
+    900: "#070812",
   },
   secondary: {
-    // teal green
-    50: "#e0f7f7", // manually adjusted
-    100: "#c1eff0",
-    200: "#a2e6e8",
-    300: "#83dee1",
-    400: "#64d6d9",
-    500: "#45ced2",
-    600: "#379fa6",
-    700: "#2a7079",
-    800: "#1c484d",
-    900: "#0e2426",
+    // yellow
+    50: "#f0f0f0", // manually adjusted
+    100: "#fff6e0",
+    200: "#ffedc2",
+    300: "#ffe3a3",
+    400: "#ffda85",
+    500: "#ffd166",
+    600: "#cca752",
+    700: "#997d3d",
+    800: "#665429",
+    900: "#332a14",
   },
 };
 
@@ -57,7 +57,6 @@ function reverseTokens(tokensDark) {
   });
   return reversedTokens;
 }
-
 export const tokensLight = reverseTokens(tokensDark);
 
 // mui theme settings
@@ -71,7 +70,7 @@ export const themeSettings = (mode) => {
             primary: {
               ...tokensDark.primary,
               main: tokensDark.primary[400],
-              light: tokensDark.primary[300],
+              light: tokensDark.primary[400],
             },
             secondary: {
               ...tokensDark.secondary,
@@ -90,21 +89,21 @@ export const themeSettings = (mode) => {
             // palette values for light mode
             primary: {
               ...tokensLight.primary,
-              main: tokensLight.primary[400],
-              light: tokensLight.primary[100],
+              main: tokensDark.grey[50],
+              light: tokensDark.grey[100],
             },
             secondary: {
               ...tokensLight.secondary,
-              main: tokensLight.secondary[600],
-              light: tokensLight.secondary[300],
+              main: tokensDark.secondary[600],
+              light: tokensDark.secondary[700],
             },
             neutral: {
               ...tokensLight.grey,
               main: tokensDark.grey[500],
             },
             background: {
-              default: tokensLight.grey[0],
-              alt: tokensLight.grey[50],
+              default: tokensDark.grey[0],
+              alt: tokensDark.grey[50],
             },
           }),
     },
