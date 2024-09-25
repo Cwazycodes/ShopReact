@@ -80,7 +80,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                tectTransform: "none",
+                textTransform: "none",
                 gap: "1rem",
               }}
             >
