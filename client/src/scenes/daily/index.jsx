@@ -19,7 +19,7 @@ const Daily = () => {
     const totalSalesLine = {
       id: "totalSales",
       data: [],
-      color: "#e57373",
+      color: theme.palette.secondary[200],
     };
     const totalUnitsLine = {
       id: "totalUnits",
